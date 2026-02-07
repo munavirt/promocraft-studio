@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PromoCraft Design System - Superman/Batman Duality */
+
+@layer base {
+  :root {
+    /* Superman Mode - Clean, Bold, Energetic */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    /* Bold Blue - Superman's Cape */
+    --primary: 217 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Clean Light Gray */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 10%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    /* Red Accent - Superman's S */
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom PromoCraft tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(217 100% 50% / 0.1) 0%, hsl(0 84% 60% / 0.05) 100%);
+    --glow-primary: 0 0 60px hsl(217 100% 50% / 0.3);
+    --glow-accent: 0 0 40px hsl(0 84% 60% / 0.2);
+    --text-gradient: linear-gradient(135deg, hsl(217 100% 50%) 0%, hsl(0 84% 60%) 100%);
+    
+    /* Animation speeds - Superman = Fast */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    --ease-hero: cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* 3D Scene */
+    --scene-ambient: 0.6;
+    --scene-intensity: 1.2;
+    --shape-color: 217 100% 50%;
+    --shape-emissive: 217 100% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 20% 10%;
+    --sidebar-primary: 217 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 100% 50%;
+  }
+
+  .dark {
+    /* Batman Mode - Cinematic, Dark, Mysterious */
+    --background: 220 20% 6%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 40 20% 95%;
+
+    /* Gold - Batman's Utility Belt */
+    --primary: 40 100% 50%;
+    --primary-foreground: 220 20% 6%;
+
+    /* Deep Gray */
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    /* Amber Glow */
+    --accent: 30 100% 55%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 40 100% 50%;
+
+    /* Custom PromoCraft tokens - Dark */
+    --hero-gradient: linear-gradient(135deg, hsl(40 100% 50% / 0.08) 0%, hsl(30 100% 55% / 0.04) 100%);
+    --glow-primary: 0 0 80px hsl(40 100% 50% / 0.25);
+    --glow-accent: 0 0 60px hsl(30 100% 55% / 0.15);
+    --text-gradient: linear-gradient(135deg, hsl(40 100% 55%) 0%, hsl(30 100% 60%) 100%);
+    
+    /* Animation speeds - Batman = Cinematic */
+    --transition-fast: 0.3s;
+    --transition-normal: 0.5s;
+    --transition-slow: 0.8s;
+    --ease-hero: cubic-bezier(0.22, 1, 0.36, 1);
+    
+    /* 3D Scene - Dark */
+    --scene-ambient: 0.2;
+    --scene-intensity: 0.8;
+    --shape-color: 40 100% 50%;
+    --shape-emissive: 40 100% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 40 100% 50%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 40 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Typography */
+  .hero-headline {
+    @apply text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95];
+    font-family: 'Syne', sans-serif;
+  }
+
+  .hero-subline {
+    @apply text-lg md:text-xl text-muted-foreground tracking-wide;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300;
+    transition-timing-function: var(--ease-hero);
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-2;
+    box-shadow: var(--glow-primary);
+  }
+
+  /* Link Underline Animation */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left scale-x-0;
+    transition: transform var(--transition-normal) var(--ease-hero);
+  }
+
+  .link-underline:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Section Padding */
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Container */
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  /* Noise Texture Overlay */
+  .noise-overlay {
+    position: relative;
+  }
+
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .dark .noise-overlay::before {
+    opacity: 0.05;
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold text-lg;
+    @apply bg-primary text-primary-foreground;
+    @apply transition-all duration-300;
+    transition-timing-function: var(--ease-hero);
+  }
+
+  .btn-hero:hover {
+    @apply scale-105;
+    box-shadow: var(--glow-primary);
+  }
+
+  .btn-ghost {
+    @apply px-8 py-4 rounded-full font-semibold text-lg;
+    @apply bg-transparent text-foreground border-2 border-border;
+    @apply transition-all duration-300;
+    transition-timing-function: var(--ease-hero);
+  }
+
+  .btn-ghost:hover {
+    @apply border-primary text-primary;
+  }
+}
+
+@layer utilities {
+  /* Stagger Animation Delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+/* Smooth Scroll with Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+/* 🔥 Kill Lovable injected CTA separators */
+.btn-hero::before,
+.btn-hero::after,
+.btn-ghost::before,
+.btn-ghost::after,
+.motion-div::before,
+.motion-div::after,
+[class*="cta"]::before,
+[class*="cta"]::after {
+  content: none !important;
+  display: none !important;
+}
