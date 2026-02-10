@@ -1,33 +1,58 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Palette, Code2, Megaphone, Sparkles } from 'lucide-react';
+import { Palette, Code2, Megaphone, Sparkles,Smartphone } from 'lucide-react';
 
 const capabilities = [
   {
     icon: Palette,
     title: 'Branding',
-    description: 'Strategic brand identity that resonates with your audience and stands the test of time.',
-    services: ['Brand Strategy', 'Visual Identity', 'Brand Guidelines', 'Logo Design'],
+    description:
+      'Strategic branding that builds trust, recognition, and long-term value for growing businesses.',
+    services: [
+      'Brand Strategy',
+      'Visual Identity',
+      'Logo Design',
+      'Brand Guidelines',
+    ],
   },
   {
     icon: Code2,
-    title: 'Web Design',
-    description: 'Beautiful, conversion-focused websites that captivate and convert visitors.',
-    services: ['UX Research', 'UI Design', 'Motion Design', 'Design Systems'],
+    title: 'Website Development',
+    description:
+      'Design and development of modern, responsive websites focused on performance and conversions.',
+    services: [
+      'UI/UX Design',
+      'Frontend Development',
+      'E-commerce Websites',
+      'CMS Integration',
+    ],
   },
   {
-    icon: Sparkles,
-    title: 'Development',
-    description: 'High-performance web applications built with cutting-edge technology.',
-    services: ['React / Next.js', 'Three.js / WebGL', 'E-commerce', 'CMS Integration'],
+    icon: Smartphone,
+    title: 'App Development',
+    description:
+      'Custom mobile applications built for scalability, performance, and user experience.',
+    services: [
+      'Android App Development',
+      'Cross-Platform Apps',
+      'API Integration',
+      'App UI/UX Design',
+    ],
   },
   {
     icon: Megaphone,
-    title: 'Growth',
-    description: 'Data-driven marketing strategies that fuel sustainable business growth.',
-    services: ['SEO Strategy', 'Content Marketing', 'Analytics', 'Conversion Optimization'],
+    title: 'Growth & Marketing',
+    description:
+      'Targeted marketing strategies designed to increase visibility, engagement, and leads.',
+    services: [
+      'Performance Advertising',
+      'Social Media Campaigns',
+      'SEO Basics',
+      'Analytics & Reporting',
+    ],
   },
 ];
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
