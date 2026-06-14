@@ -9,7 +9,7 @@ const plans = [
   {
     name: 'Starter',
     description: 'Perfect for small projects and startups looking to establish their digital presence.',
-    price: '₹17,999',
+    price: '₹29,999',
     period: 'starting at',
     features: [
       'Brand Strategy Workshop',
@@ -24,7 +24,7 @@ const plans = [
   {
     name: 'Growth',
     description: 'For businesses ready to scale with a comprehensive digital experience.',
-    price: '₹29,999',
+    price: '₹49,999',
     period: 'starting at',
     features: [
       'Everything in Starter',
