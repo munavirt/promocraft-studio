@@ -21,7 +21,7 @@ const footerLinks = {
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'Instagram', href: 'https://www.instagram.com/promocraft.in/', icon: Instagram },
-    { name: 'Facebook ', href: '#', icon: Facebook  },
+    { name: 'Facebook ', href: '#', icon: Facebook },
   ],
 };
 
@@ -40,10 +40,10 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-muted-foreground max-w-sm leading-relaxed mb-8">
-              We craft brands, websites & experiences that people remember. 
+              We craft brands, websites & experiences that people remember.
               Strategy-first, design-focused, tech-powered.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex items-center gap-4">
               {footerLinks.social.map((social) => (
@@ -102,10 +102,10 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="mailto:promocraftofficial@gmail.com"
+                    href="mailto:support@promocraft.in"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    promocraftofficial@gmail.com
+                    support@promocraft.in
                   </a>
                 </li>
                 <li>
