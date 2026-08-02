@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Palette, Code2, Megaphone, Layers } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import CTASection from '@/components/sections/CTASection';
 import PageTransition from '@/components/PageTransition';
 
 const services = [
@@ -209,8 +208,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-
-        <CTASection />
       </main>
       <Footer />
     </div>

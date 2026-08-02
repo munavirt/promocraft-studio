@@ -81,8 +81,11 @@ export default function CapabilitiesSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="section-padding bg-secondary/30 noise-overlay">
-      <div className="container-wide relative z-10">
+    <section className="section-padding bg-secondary/30 noise-overlay relative">
+      {/* Connecting Timeline Line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-24 bg-primary" />
+      
+      <div className="container-wide relative z-10 pt-12">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
           <motion.span

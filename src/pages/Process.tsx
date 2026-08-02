@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Search, PenTool, Code2, Rocket, TrendingUp } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import CTASection from '@/components/sections/CTASection';
 import PageTransition from '@/components/PageTransition';
 
 const steps = [
@@ -149,8 +148,6 @@ export default function Process() {
             </div>
           </div>
         </section>
-
-        <CTASection />
       </main>
       <Footer />
     </div>

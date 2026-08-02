@@ -3,7 +3,6 @@ import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import CTASection from '@/components/sections/CTASection';
 import PageTransition from '@/components/PageTransition';
 import { projects } from '@/data/projects';
 
@@ -88,8 +87,6 @@ export default function Work() {
               </div>
             </div>
           </section>
-
-          <CTASection />
         </main>
         <Footer />
       </div>

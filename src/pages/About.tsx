@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import CTASection from '@/components/sections/CTASection';
 import PageTransition from '@/components/PageTransition';
 
 const timelineEvents = [
@@ -150,8 +149,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
-        <CTASection />
       </main>
       <Footer />
     </div>

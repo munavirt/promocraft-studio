@@ -1,10 +1,9 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
-import CitySceneSection from '@/components/sections/CitySceneSection';
+import StoryScrollSection from '@/components/sections/StoryScrollSection';
 import CapabilitiesSection from '@/components/sections/CapabilitiesSection';
 import WhySection from '@/components/sections/WhySection';
-import CTASection from '@/components/sections/CTASection';
 import PageTransition from '@/components/PageTransition';
 
 const Index = () => {
@@ -14,10 +13,9 @@ const Index = () => {
         <Navbar />
         <main>
           <HeroSection />
-          <CitySceneSection />
+          <StoryScrollSection />
           <CapabilitiesSection />
           <WhySection />
-          <CTASection />
         </main>
         <Footer />
       </div>
