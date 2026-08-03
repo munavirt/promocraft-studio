@@ -369,12 +369,13 @@ export default function StoryScrollSection() {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
-      className="relative w-full bg-white z-20"
+    <section
+      ref={sectionRef}
+      className="relative w-full bg-background z-20"
       style={{ height: '800vh' }}
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-white">
+      {/* Sticky container that holds everything */}
+      <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
         
         {/* Parallax Camera Container */}
         <div ref={cameraRef} className="relative w-full h-full flex items-center justify-center">
@@ -393,27 +394,27 @@ export default function StoryScrollSection() {
           {/* Using mix-blend-multiply so the stroke elegantly interacts with the text if they overlap */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             
-            <div ref={ideaRef} className="absolute text-[16vw] md:text-[14vw] font-display font-bold leading-none tracking-tighter text-zinc-950 mix-blend-multiply">
+            <div ref={ideaRef} className="absolute text-[16vw] md:text-[14vw] font-display font-bold leading-none tracking-tighter text-zinc-950 dark:text-foreground mix-blend-multiply dark:mix-blend-normal">
               IDEA
             </div>
 
-            <div ref={strategyRef} className="absolute text-[14vw] md:text-[12vw] font-display font-bold leading-none tracking-tighter text-zinc-950 mix-blend-multiply">
+            <div ref={strategyRef} className="absolute text-[14vw] md:text-[12vw] font-display font-bold leading-none tracking-tighter text-zinc-950 dark:text-foreground mix-blend-multiply dark:mix-blend-normal">
               STRATEGY
             </div>
 
-            <div ref={designRef} className="absolute text-[15vw] md:text-[13vw] font-display font-bold leading-none tracking-tight text-zinc-950 mix-blend-multiply">
+            <div ref={designRef} className="absolute text-[15vw] md:text-[13vw] font-display font-bold leading-none tracking-tight text-zinc-950 dark:text-foreground mix-blend-multiply dark:mix-blend-normal">
               DESIGN
             </div>
 
-            <div ref={developRef} className="absolute text-[14vw] md:text-[12vw] font-display font-bold leading-none tracking-tighter text-zinc-950 mix-blend-multiply">
+            <div ref={developRef} className="absolute text-[14vw] md:text-[12vw] font-display font-bold leading-none tracking-tighter text-zinc-950 dark:text-foreground mix-blend-multiply dark:mix-blend-normal">
               DEVELOP
             </div>
 
-            <div ref={launchRef} className="absolute text-[15vw] md:text-[13vw] font-display font-bold leading-none tracking-tight text-zinc-950 mix-blend-multiply">
+            <div ref={launchRef} className="absolute text-[15vw] md:text-[13vw] font-display font-bold leading-none tracking-tight text-zinc-950 dark:text-foreground mix-blend-multiply dark:mix-blend-normal">
               LAUNCH
             </div>
 
-            <div ref={growRef} className="absolute text-[17vw] md:text-[15vw] font-display font-bold leading-none tracking-tight text-zinc-950 mix-blend-multiply">
+            <div ref={growRef} className="absolute text-[17vw] md:text-[15vw] font-display font-bold leading-none tracking-tight text-zinc-950 dark:text-foreground mix-blend-multiply dark:mix-blend-normal">
               GROW
             </div>
 

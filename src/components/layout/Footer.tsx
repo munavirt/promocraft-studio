@@ -81,7 +81,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={containerRef} className="relative bg-white overflow-hidden">
+    <footer ref={containerRef} className="relative bg-background overflow-hidden">
       
       {/* SECTION ONE: Final CTA */}
       <div className="relative min-h-[95vh] flex items-center justify-center section-padding">
@@ -97,10 +97,10 @@ export default function Footer() {
 
         {/* CTA Content */}
         <div ref={ctaContentRef} className="container-wide relative z-10 text-center max-w-4xl mx-auto opacity-0">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-tight tracking-tight text-zinc-950">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-tight tracking-tight text-foreground">
             Let's Build Something <br className="hidden md:block" /> Extraordinary.
           </h2>
-          <p className="text-xl md:text-2xl text-zinc-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             PromoCraft partners with ambitious businesses across the globe to craft unforgettable digital experiences.
           </p>
           <Link to="/contact">
@@ -113,7 +113,7 @@ export default function Footer() {
       </div>
 
       {/* SECTION TWO: Footer Information */}
-      <div ref={footerContentRef} className="relative z-10 bg-white border-t border-border mt-10 overflow-hidden">
+      <div ref={footerContentRef} className="relative z-10 bg-background border-t border-border mt-10 overflow-hidden">
         <WorldMapBackground />
         <div className="relative z-10 container-wide section-padding pb-8">
           {/* Top Section */}

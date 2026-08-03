@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 
 export default function CTABackground() {
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-white">
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-background">
+      <div className="absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay"></div>
       {/* Base soft gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-sky-50/20" />
 
